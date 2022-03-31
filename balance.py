@@ -2,8 +2,8 @@ from binance.client import Client
 import requests
 
 #keys of the account
-api_key = '40YopFhRegeK7XKurjiOoSQbiWqMKDaKkR29SoZ98l0YAWiGsPVvf1Odal0VZGnh'
-api_secret = '6E5qyaJsKddlaa4B5J53GmkITpiaodSTvyM124fdUYPIQz9i3pNDwS67Et733Gee'
+api_key = 'ENTER HERE YOUR KEY'
+api_secret = 'ENTER HERE YOUR KEY'
 
 #connect to the account
 client = Client(api_key, api_secret)
