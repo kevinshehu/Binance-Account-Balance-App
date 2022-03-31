@@ -1,12 +1,15 @@
 from binance.client import Client
 import requests
 
+#keys of the account
 api_key = '40YopFhRegeK7XKurjiOoSQbiWqMKDaKkR29SoZ98l0YAWiGsPVvf1Odal0VZGnh'
 api_secret = '6E5qyaJsKddlaa4B5J53GmkITpiaodSTvyM124fdUYPIQz9i3pNDwS67Et733Gee'
 
+#connect to the account
 client = Client(api_key, api_secret)
 key = "https://api.binance.com/api/v3/ticker/price?symbol="
 
+#currencies that will be displayed
 currenciesName = ["APEUSDT", "GMTUSDT"]
 currenciesPrices = []
 
@@ -22,6 +25,8 @@ for i in range(2):
     j = j+1
 
 
+#calculate total
+
 usdtBalance = float(client.get_asset_balance(asset='USDT')['free'])
 
 apeBalance = float(client.get_asset_balance(asset='APE')['free'])
@@ -32,6 +37,7 @@ gmtBalance = float(client.get_asset_balance(asset='GMT')['free'])
 gmtPrice = currenciesPrices[1]
 gmtTotal = gmtBalance * gmtPrice
 
+#print results
 print("\n********************************************************")
 print("*        USDT: $", usdtBalance)
 print("*        APE: $", apeTotal)
